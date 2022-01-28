@@ -1,0 +1,26 @@
+.btn {
+  padding: 25px 55px;
+  background-color: #000;
+  font-family: "Space Grotesk Web", sans-serif;
+  font-size: 18px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  color: white;
+  margin-top: 20px;
+  margin-left: 15%;
+  &:hover {
+    color: black;
+    background-color: #fff;
+    border: 1px solid black;
+    transition: background-color 0.3s ease-in;
+  }
+  @include respond(mobile-L) {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  @include respond(mobile-S) {
+    font-size: 13px;
+    padding: 6px 0px;
+  }
+}

@@ -1,0 +1,30 @@
+#contact{
+    min-height: 100vh;
+    .col{
+        @include flexbox (column,center,center);
+        h1{
+            font-size: 44px;
+            font-weight: 600;
+            margin-bottom: 40px
+        }
+        form{
+            @include flexbox (column,center,center);
+            input,textarea{
+                margin: 20px 0;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: 1px solid grey;
+                width: 30vw;
+                padding: 30px;
+                &::placeholder{
+                    font-size: 20px;
+                }
+            } 
+            
+            .btn{
+                margin-right: 60px;
+            }
+        }
+    }
+}

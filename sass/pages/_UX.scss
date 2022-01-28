@@ -1,0 +1,275 @@
+#home {
+  height: 100vh;
+  width: 100%;
+  background-image: url(/Additional/Pictures/header\ background\ image.png);
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 15px 40px;
+  header {
+    position: relative;
+    margin-top: 30px;
+    .nav_bar {
+      @include flexbox(row, center, space-between);
+      @include respond(tab-por) {
+        @include flexbox(column, center, space-between);
+        .list {
+          padding: 15px 10px;
+        }
+      }
+
+      .brand {
+        text-decoration: none;
+        color: $blue;
+        font-size: 32px !important;
+        font-weight: 600;
+        font-family: "Space Grotesk Web", sans-serif;
+      }
+      .list {
+        @include flexbox(row, center, space-between);
+        list-style: none;
+        li {
+          padding: 8px;
+          a {
+            position: relative;
+            text-decoration: none;
+            color: grey;
+            &:before {
+              position: absolute;
+              content: "";
+              left: 0;
+              bottom: -5px;
+              height: 3px;
+              width: 100%;
+              background-color: rgb(92, 88, 88);
+              transform: scaleX(0);
+              transform-origin: right;
+              transition: transform 0.4s linear;
+            }
+            &:hover::before {
+              transform: scaleX(1);
+              transform-origin: left;
+            }
+          }
+        }
+      }
+    }
+  }
+  .home_text {
+    @include flexbox(column, start, start);
+    position: relative;
+    margin-top: 370px;
+
+    h1 {
+      color: black;
+      font-size: 80px;
+      font-weight: bold;
+      @include respond(mobile-L){
+        font-size: 65px;
+    }
+    @include respond(mobile-S){
+        font-size: 45px;
+    }
+    }
+  }
+}
+
+#Brands {
+    margin-bottom: 70px;
+  .wrapper_about {
+    position: relative;
+    min-height: 100vh;
+    background-image: url(/Additional/Pictures/UX/Google.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    float: left;
+
+    .column_about {
+      position: absolute;
+      @include flexbox(column, center, center);
+      width: 50%;
+      height: 100%;
+      background-color: rgba(66, 132, 244, 0.69);
+      color: #fff;
+      &:hover {
+        transition: background-color 0.3s linear;
+        background-color: rgba(66, 132, 244, 0.85);
+      }
+      @include respond (tab-land){
+        width: 100%;
+      }
+      h2 {
+        margin-bottom: 16 px;
+        padding-top: 17 px;
+        padding-bottom: 15 px;
+        font-size: 65px;
+        font-weight: 200;
+      }
+      .paragraph {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: 400;
+      }
+      a {
+        position: relative;
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        &:before {
+          position: absolute;
+          content: "";
+          left: 0px;
+          bottom: -5px;
+          height: 2px;
+          width: 100%;
+          background-color: rgb(198, 212, 212);
+        }
+        &:hover::before {
+          background-color: white;
+        }
+      }
+    }
+  }
+}
+
+.wrapper_ponder{
+    background-image: url(/Additional/Pictures/UX/Google\ ponder.png) !important;
+   .column_ponder{
+    background-color:rgba(135, 108, 255, 0.5) !important;
+    @include respond (tab-land){
+      width: 100%;
+    }
+   &:hover{
+    background-color:rgba(135, 108, 255, 0.8) !important;
+   }
+   }
+}
+
+.wrapper_lenovo{
+    background-image: url(/Additional/Pictures/UX/Lenovo.png) !important;
+   .column_lenovo{
+    background-color:rgba(255, 0, 4, 0.5) !important;
+    @include respond (tab-land){
+      width: 100%;
+    }
+   &:hover{
+    background-color:rgba(187, 8, 10, 0.93) !important;
+   }
+   }
+}
+.wrapper_guide{
+    background-image: url(/Additional/Pictures/UX/Guide.png) !important;
+   .column_guide{
+    background-color:rgba(54, 54, 54, 0.47) !important;
+    @include respond (tab-land){
+      width: 100%;
+    }
+   &:hover{
+    background-color:rgba(54, 54, 54, 0.93) !important;
+   }
+   }
+}
+
+.wrapper_samsung{
+    background-image: url(/Additional/Pictures/UX/Samsung.png) !important;
+   .column_samsung{
+    background-color:rgba(0, 0, 0, 0.4) !important;
+    @include respond (tab-land){
+      width: 100%;
+    }
+   &:hover{
+    background-color:rgba(0, 0, 0, 0.86) !important;
+   }
+   }
+}
+.wrapper_volvo{
+    background-image: url(/Additional/Pictures/UX/Volvo.png) !important;
+   .column_volvo{
+    background-color:rgba(7, 52, 152, 0.56) !important;
+    @include respond (tab-land){
+      width: 100%;
+    }
+   &:hover{
+    background-color:rgba(7, 52, 152, 0.89) !important;
+   }
+   }
+}
+
+.wrapper_anew{
+    background-image: url(/Additional/Pictures/UX/Anew.png) !important;
+   .column_anew{
+    background-color:rgba(87, 72, 247, 0.7) !important;
+    @include respond (tab-land){
+      width: 100%;
+    }
+   &:hover{
+    background-color:rgba(87, 72, 247, 0.95) !important;
+   }
+   }
+}
+
+.wrapper_bridge{
+    background-image: url(/Additional/Pictures/UX/Bridge.png) !important;
+   .column_bridge{
+    background-color:rgba(114, 148, 238, 0.7) !important;
+    @include respond (tab-land){
+      width: 100%;
+    }
+   &:hover{
+    background-color:rgba(114, 148, 238, 0.95) !important;
+   }
+   }
+}
+
+.wrapper_porsche{
+    margin-bottom: 80px;
+    background-image: url(/Additional/Pictures/UX/Porsche.png) !important;
+   .column_porsche{
+    background-color:rgba(0, 0, 0, 0.7) !important;
+    @include respond (tab-land){
+      width: 100%;
+    }
+   &:hover{
+    background-color:rgba(0, 0, 0, 0.95) !important;
+   }
+   }
+}
+
+
+footer { 
+  width: 100%;
+  height: auto;
+  margin-top: 80px;
+  padding: 90px 5vw;
+  border-top: 1px none #dbdbdb;
+  background-color: #fafafa;
+  h1 {
+    padding-bottom: 30px;
+  }
+  .list_links {
+    a {
+      position: relative;
+      text-decoration: none;
+      color: grey;
+      padding-left: 10px;
+      &:hover {
+        color: black;
+      }
+      &:before {
+        position: absolute;
+        content: "";
+        left: 10px;
+        bottom: -7px;
+        height: 2px;
+        width: 85%;
+        background-color: rgb(172, 169, 169);
+      }
+      &:hover::before {
+        background-color: black;
+      }
+    }
+  }
+}

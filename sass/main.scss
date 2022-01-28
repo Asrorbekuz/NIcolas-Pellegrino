@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk Web',sans-serif;
+}
+
+
+@import "utils/veribles";
+
+@import "utils/mixins";
+
+@import "utils/margin&padding";
+
+@import "pages/graphic";
+
+@import "pages/about";
+
+@import "pages/contact";
+
+@import "utils/grid";
+
+@import "pages/UX";
+
+@import "components/button";

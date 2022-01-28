@@ -1,0 +1,91 @@
+#home_graphic{
+    height: 85vh;
+    width: 100%;
+    padding: 15px 40px;
+    header{
+        position: relative;
+        margin-top: 30px;
+        .nav_bar{
+            @include flexbox(row,center,space-between);
+            @include respond (tab-por){
+                @include flexbox (column,center,space-between);
+                .list{
+                    padding: 15px 10px;
+                }
+            }
+    
+            .brand{
+                text-decoration: none;
+                color: $blue;
+                font-size: 32px !important;
+                font-weight: 600;
+                font-family: 'Space Grotesk Web',sans-serif;
+            }
+            .list{
+                @include flexbox(row,center,space-between);
+                list-style: none;
+               li{
+                   padding: 8px;
+                   a{
+                       position: relative;
+                       text-decoration: none;
+                       color: grey;
+                       &:before{
+                           position: absolute;
+                           content: '';
+                           left: 0;
+                           bottom: -5px;
+                           height: 3px;
+                           width: 100%;
+                           background-color: rgb(92, 88, 88);
+                           transform: scaleX(0);
+                           transform-origin: right;
+                           transition: transform .4s linear;
+                       }
+                       &:hover::before{
+                           transform: scaleX(1);
+                           transform-origin: left;
+
+                       }
+                       
+                   }
+               }
+            }
+        }
+    }
+    .home_graphic_text{
+        @include flexbox (column,start,start);
+         position: relative;
+         margin-top: 170px;
+        
+        h1{
+            color: black;
+            font-size: 80px;
+            font-weight: bold;
+            @include respond(mobile-L){
+                font-size: 65px;
+            }
+            @include respond(mobile-S){
+                font-size: 45px;
+            }
+        }
+    }
+}
+#graphic{
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+     .col_first{
+         padding-top: 0 !important;
+     }
+     .col{
+         padding-top: 200px;
+        img{
+            max-width: 100%;
+           }
+     }  
+     .col_last{
+         padding-bottom: 80px;
+     }
+    }
+}

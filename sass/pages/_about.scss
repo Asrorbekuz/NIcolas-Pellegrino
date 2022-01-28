@@ -1,0 +1,166 @@
+#home_about {
+  height: 70vh;
+  width: 100%;
+  padding: 15px 40px;
+  header {
+    position: relative;
+    margin-top: 30px;
+    .nav_bar {
+      @include flexbox(row, center, space-between);
+      @include respond(tab-por) {
+        @include flexbox(column, center, space-between);
+        .list {
+          padding: 15px 10px;
+        }
+      }
+
+      .brand {
+        text-decoration: none;
+        color: $blue;
+        font-size: 32px !important;
+        font-weight: 600;
+        font-family: "Space Grotesk Web", sans-serif;
+      }
+      .list {
+        @include flexbox(row, center, space-between);
+        list-style: none;
+        li {
+          padding: 8px;
+          a {
+            position: relative;
+            text-decoration: none;
+            color: grey;
+            &:before {
+              position: absolute;
+              content: "";
+              left: 0;
+              bottom: -5px;
+              height: 3px;
+              width: 100%;
+              background-color: rgb(92, 88, 88);
+              transform: scaleX(0);
+              transform-origin: right;
+              transition: transform 0.4s linear;
+            }
+            &:hover::before {
+              transform: scaleX(1);
+              transform-origin: left;
+            }
+          }
+        }
+      }
+    }
+  }
+  .home_about_text {
+    @include flexbox(column, start, start);
+    position: relative;
+    margin-top: 150px;
+
+    h1 {
+      color: black;
+      font-size: 80px;
+      font-weight: bold;
+      @include respond(mobile-L){
+        font-size: 65px;
+    }
+    @include respond(mobile-S){
+        font-size: 45px;
+    }
+    }
+  }
+}
+
+
+#about {
+  top: 70vh;
+  width: 100vw;
+  height: auto;
+
+  .wrapper_about {
+    position: relative;
+    min-height: 100vh;
+    background-image: url(/Additional/Pictures/About/About\ firsrt.jfif);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    .column_about {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.74);
+      color: #fff;
+      @include respond (tab-land){
+        width: 100%;
+      }
+
+      h2 {
+        height: auto;
+        font-size: 38px;
+        padding-right: 90px;
+        margin-bottom: 35px;
+        @include respond (lg){
+          font-size: 26px;
+        }
+        @include respond (tab-por){
+          font-size: 19px;
+        }
+      }
+      .paragraph {
+        width: 20vw;
+        height: auto;
+        font-size: 45px;
+        line-height: 60px;
+        font-weight: 700;
+        @include respond (lg){
+          font-size: 32px;
+          font-weight: 300;
+          line-height: 55px;
+        }
+        @include respond (tab-por){
+          font-size: 24px;
+          line-height: 45px;
+        } 
+      }
+    }
+  }
+  .wrapper_center {
+      margin-bottom:70px ;
+    .wrapper-info {
+        @include flexbox (row,center,center);
+      width: 100%;
+      padding-top: 5vh;
+      .wrap-content {
+        width: 40vw;
+        height: auto;
+        padding-top: 20px;
+        padding-right: 0;
+        h2 {
+          margin-bottom: 30px;
+          font-size: 44px;
+          line-height: 52px;
+          font-weight: 900;
+        }
+        .paragraph-81 {
+          width: 100%;
+          margin-bottom: 40px;
+          font-family: "Neue Haas Grotesk Web", sans-serif;
+          color: #161616;
+          font-size: 18px;
+          line-height: 32px;
+          @include respond(tab-land){
+            font-size: 16px;
+        }
+        @include respond(mobile-M){
+            font-size: 13px;
+        }
+        }
+      }
+    }
+  }
+}
